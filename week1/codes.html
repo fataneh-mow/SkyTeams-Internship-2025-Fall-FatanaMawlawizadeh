@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 1</title>
-    <script src="testings.js"></script>
     <style>
         body{
             margin: 2rem;
@@ -25,9 +24,6 @@
         console.log(`Value two is equal to ${variable2}`);
 
         console.log(`Values changed: ${[variable1, variable2]} => ${swap(variable1, variable2)}`);
-
-        // console.log(`Now value one is equal to ${variable1}`);
-        // console.log(`Now value two is equal to ${variable2}`);
 
         // 2.Even, Odd or Prime
         let askedNumber = Number(prompt("Enter a number:"));
@@ -60,11 +56,11 @@
         }
         
         // function for specifying Even, Odd, or Prime number
-        function isEven (n) {
-            if(n%2 === 0) {
-                console.log("Your number is even!");
+        function isEven(n) {
+            if (n % 2 === 0) {
+                return "even";
             } else {
-                console.log("Your number is odd!");
+                return "odd";
             }
         }
 
@@ -83,8 +79,7 @@
             
             console.log(`${number} is prime`);
             return true;
-		}
-
+        }
         // function for summing all the numbers of an array
         function arraySum (numbers) {
             let sum = 0;
@@ -118,16 +113,16 @@
         }
 
         // function for finding the largest number in a list
-        function greatestNumber () {
-            let greatest = listedNumbs[0];
-
-            for (let i = 1; i < listedNumbs.length; i++) {
-                if (listedNumbs[i] > greatest) {
-                greatest = listedNumbs[i];
+        function greatestNumber(arr) {
+            let greatest = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > greatest) {
+                    greatest = arr[i];
                 }
             }
             return greatest;
         }
     </script>
+    <script src="testings.js"></script>
 </body>
 </html>
