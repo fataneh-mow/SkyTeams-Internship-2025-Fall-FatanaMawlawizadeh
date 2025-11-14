@@ -22,7 +22,7 @@ export function reverseList (array){
     let reversed = "";
 
     for(let i = array.length - 1; i>= 0; i--) {
-        reversed += " " + array[i];
+        reversed += array[i];
     }
     return reversed;
 }
