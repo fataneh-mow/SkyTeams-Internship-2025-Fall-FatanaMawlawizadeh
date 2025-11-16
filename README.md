@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 - Topics of the week:
   1- Git version control and GitHub
   2- Programming Fundementals for JS syntax
@@ -18,5 +18,4 @@
 - My Reflectioon: This week I made a lot of progress and solved some confusing problems. I’m getting more confident with JavaScript and GitHub, even when facing errors!
   Finally I can get it that there are still many things to learn, and I’m excited to keep improving.
   
-=======
->>>>>>> origin/main
+
