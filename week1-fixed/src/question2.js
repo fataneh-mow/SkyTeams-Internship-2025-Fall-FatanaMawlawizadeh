@@ -15,7 +15,7 @@ export function isEven(n) {
 }
 
 export function isPrime(number) {
-  if (number < 2) return;
+  if (number < 2) return `${number} is unchekable, insert another number`;
 
   for (let i = 2; i * i <= number; i++) {
     if (number % i === 0) return false;
