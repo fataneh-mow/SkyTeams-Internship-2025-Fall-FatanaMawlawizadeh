@@ -35,8 +35,8 @@ describe("isPrime()", () => {
     });
 
     it("returns undefined for numbers < 2", () => {
-        expect(isPrime(1)).toBe(undefined);
-        expect(isPrime(0)).toBe(undefined);
-        expect(isPrime(-5)).toBe(undefined);
+        expect(isPrime(1)).toBe("1 is unchekable, insert another number");
+        expect(isPrime(0)).toBe("0 is unchekable, insert another number");
+        expect(isPrime(-5)).toBe("-5 is unchekable, insert another number");
     });
 });
