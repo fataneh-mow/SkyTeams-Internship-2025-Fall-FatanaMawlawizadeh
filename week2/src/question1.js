@@ -7,7 +7,7 @@
 
  */
 
-function swapVariables (a, b) {
+export function swapVariables (a, b) {
     let swapedd = [a, b] = [b,a];
     return swapedd;
 }
