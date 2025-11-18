@@ -7,14 +7,14 @@
 
 */
 
-function areaPerimeter (length, width) {
+export function areaPerimeter (length, width) {
+    length = Number(length);
+    width = Number(width);
+
     let area = length * width;
 
     let perimeter = 2*(length + width);
 
-    return `area => ${area}, perimeter => ${perimeter}`;
+    return {area,  perimeter};
     
-}
-
-let result = areaPerimeter(2,4);
-console.log(result);
+};
