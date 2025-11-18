@@ -9,7 +9,7 @@
       C = (F - 32) × 5/9
 */
 
-function convertToCelsius (temp) {
+export function convertToCelsius (temp) {
     if (isNaN(temp)) {
         return `Not a number!`;
     }
@@ -17,8 +17,10 @@ function convertToCelsius (temp) {
         return Math.round((temp - 32) * 5 / 9);
     }
 }
+let result = convertToCelsius(36.6);
+console.log(result);
 
-function convertToFahrenheit  (temp) {
+export function convertToFahrenheit  (temp) {
     if (isNaN(temp)) {
         return `Not a number!`;
     } 
@@ -26,9 +28,3 @@ function convertToFahrenheit  (temp) {
         return Math.round(((temp* 9/5) + 32));
     }
 }
-
-let resultC = convertToCelsius(25);
-console.log(resultC);
-
-let resultF = convertToFahrenheit ();
-console.log(resultF);
