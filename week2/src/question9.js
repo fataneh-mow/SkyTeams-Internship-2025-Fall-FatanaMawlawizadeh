@@ -32,6 +32,3 @@ export function calculateGrade (input) {
     if (score >= 30) return "D";
     if (score < 30) return "F";
 };
-
-let result = calculateGrade(0);
-console.log(result);
