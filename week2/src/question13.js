@@ -50,6 +50,3 @@ export function displayMonth (month) {
             return `${month} must be in 1-12 range`;
     };
 };
-
-let test = displayMonth(2);
-console.log(test);
