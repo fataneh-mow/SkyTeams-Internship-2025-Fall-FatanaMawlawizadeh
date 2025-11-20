@@ -1,21 +1,26 @@
 /**
- * Author: Fatana Mawlawizadeh
- * Date: Nov, 19th, 2025
- * Question 14. Check character type
- * Determines if input is vowel, consonant, digit, or special symbol.
+    * Author: Fatana Mawlawizadeh
+    
+    * Date: Nov, 19th, 2025
+
+    * Question 14. Check character type
+    
+    * Determines if input is vowel, consonant, digit, or special symbol.
+    Example: 
+    Input: 
+    a 
+    Output: 
+    Vowel
  */
 
-function characterType(char) {
-
+export function characterType(char) {
     // letters
     let letters = [];
-
-    // A - Z
+    // A - Z upperCase
     for (let i = 65; i <= 90; i++) {
         letters.push(String.fromCharCode(i));
     }
-
-    // a - z 
+    // a - z lowerCase
     for (let i = 97; i <= 122; i++) {
         letters.push(String.fromCharCode(i));
     }
@@ -63,8 +68,5 @@ function characterType(char) {
 
         default:
             return `${char} is not recognized`;
-    }
-}
-
-let result = characterType("C");
-console.log(result);
+    };
+};
