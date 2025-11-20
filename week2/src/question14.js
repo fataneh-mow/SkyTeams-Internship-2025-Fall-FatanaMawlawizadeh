@@ -52,8 +52,8 @@ export function characterType(char) {
 
     // switch case
     switch (true) {
-        case char.length > 1:
-            return "enter one character";
+        case String(char).length !== 1:
+            return "Enter one character";
         case vowels.includes(char):
             return `${char} is a Vowel`;
 
@@ -67,6 +67,6 @@ export function characterType(char) {
             return `${char} is a Symbol`;
 
         default:
-            return `${char} is not recognized`;
+            return `enter one character`;
     };
 };
