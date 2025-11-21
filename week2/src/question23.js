@@ -3,13 +3,13 @@
     
     * Date: Nov, 20th, 2025
 
-    * Question 22. Print even numbers in a range 
-    Description: Input start and end values, print all even numbers between them. 
+    * Question 23. Fibonacci series up to N terms 
+    Description: Generate the Fibonacci sequence (0, 1, 1, 2, 3, 5, 8...) up to N terms. 
     Example: 
     Input: 
-    1, 10 
+    7 
     Output: 
-    2, 4, 6, 8, 10
+    0, 1, 1, 2, 3, 5, 8
 
 */
 
