@@ -13,7 +13,7 @@
     6
 */
 
-export function findGCD(a, b) {
+export function findGCD (a, b) {
     const originalA = a;
     const originalB = b;
 
