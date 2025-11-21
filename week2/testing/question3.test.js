@@ -22,7 +22,6 @@ describe("areaPerimeter finds both area and perimeter using length and width", (
         expect(areaPerimeter(7, 7)).toEqual({area: 49, perimeter: 28});
         expect(areaPerimeter(1, 2)).toEqual({area: 2, perimeter: 6});
         expect(areaPerimeter("1", 2)).toEqual({area: 2, perimeter: 6});
-
     });
     it("finds area and perimeter with one vlaue zero", () => {
         expect(areaPerimeter(0, 5)).toEqual({area: 0, perimeter: 10});
@@ -36,11 +35,11 @@ describe("areaPerimeter finds both area and perimeter using length and width", (
         expect(areaPerimeter(2.5, 4.2)).toEqual({area: 10.5, perimeter: 13.4});
         expect(areaPerimeter(-4, -3)).toEqual({area: 12, perimeter: -14});
     });
-    it("finds area and perimeter with string and number", () => {
+    it("Does not find area and perimeter with string and number", () => {
         expect(areaPerimeter("hello", 2)).toEqual({area: NaN, perimeter: NaN});
         expect(areaPerimeter("world", -3)).toEqual({area: NaN, perimeter: NaN});
     });
-    it("finds area and perimeter with missing parameter", () => {
+    it("Does not find area and perimeter with missing parameter", () => {
         expect(areaPerimeter(2)).toEqual({area: NaN, perimeter: NaN});
         expect(areaPerimeter(-3)).toEqual({area: NaN, perimeter: NaN});
     });

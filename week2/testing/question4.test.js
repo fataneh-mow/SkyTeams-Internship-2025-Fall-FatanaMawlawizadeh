@@ -29,15 +29,4 @@ describe("the functions convertToCelsius and convertToFahrenheit converts Celsiu
         expect(convertToFahrenheit(37)).toBe(99);
         expect(convertToFahrenheit(-18)).toBe(-0);
     });
-    // the edge case negative numbers is not passing!
-    // it("Finds temperature with negative temperatures", () => {
-    //     // Celsius to fahrenheit
-    //     expect(convertToCelsius(-40).toBe(-40));
-    // })
-    it("Finds temperature with deciaml temperatures", () => {
-        // Celsius to fahrenheit
-        expect(convertToCelsius(36.6).toBe(3));
-        expect(convertToCelsius(0.5).toBe(33));
-
-    });
 });

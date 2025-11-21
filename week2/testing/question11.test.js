@@ -18,8 +18,8 @@ import { calculate } from "../src/question11";
 
 describe("calulate function does these four operations +, -, *, /", () => {
     it("Does not check for unapplicable numbers", () =>{
-        expect(calculate(12, "Hello", "*")).toBe("12 and Hello are not applicable");
-        expect(calculate(12, undefined, "*")).toBe("12 and undefined are not applicable");
+        expect(calculate(12, "Hello", "*")).toBe("Inputs must be number");
+        expect(calculate(12, undefined, "*")).toBe("Inputs must be number");
     });
     it("Regards null as zero", () =>{
         expect(calculate(12, null, "*")).toBe(0);
@@ -35,12 +35,12 @@ describe("calulate function does these four operations +, -, *, /", () => {
         expect(calculate(1000000, 2000000, "+")).toBe(3000000);
     });
     it("Does not devide numbers by zero", () =>{
-        expect(calculate(10, 0, "/")).toBe("0 must not be zero");
+        expect(calculate(10, 0, "/")).toBe("Second number must not be zero");
     });
     it("Does not operate while operator be rather than +, -, /, *", () =>{
-        expect(calculate(5, 5, "%")).toBe("% is not included yet!");
-        expect(calculate(9, 3, "^")).toBe("^ is not included yet!");
-        expect(calculate(10, 5)).toBe("undefined is not included yet!");
+        expect(calculate(5, 5, "%")).toBe("Unknown character for operation");
+        expect(calculate(9, 3, "^")).toBe("Unknown character for operation");
+        expect(calculate(10, 5)).toBe("Unknown character for operation");
     });
     it("Works properly with negative numbers", () =>{
         expect(calculate(-5, 3, "+")).toBe(-2);
