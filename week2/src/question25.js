@@ -14,20 +14,18 @@
 
 */
 
-import { findGCD } from './question23';
+import { findGCD } from './question24';
 
-// export function findLCM (a, b) {
-//     const num1 = Number(a);
-//     const num2 = Number(b);
+export function findLCM (a, b) {
+    if (isNaN(Number(a)) || isNaN(Number(b))) {
+        return "Insert only numbers";
+    };
+    // LCM(a, b) = (a × b) / GCD(a, b) 
+    const gcdString = findGCD(a, b);
+    if (gcdString.includes("Insert only numbers")) return "Insert only numbers";
 
-//     if (isNaN(num1) || isNaN(num2)) return "Insert only numbers";
+    const gcdValue = Number(gcdString.split(" is ")[1]);
+    const lcmValue = Math.abs(a * b) / gcdValue; // absolute values is necessary for negative numbers
 
-//     const gcdString = findGCD(num1, num2);
-//     if (gcdString.includes("Insert only numbers")) return "Insert only numbers";
-
-//     const gcdValue = Number(gcdString.split(" is ")[1]);
-//     const lcmValue = Math.abs(num1 * num2) / gcdValue;
-
-//     return `LCM of ${num1}, ${num2} is ${lcmValue}`;
-// };
-//function has problem!!!
+    return `LCM of ${a}, ${b} is ${lcmValue}`;
+};
