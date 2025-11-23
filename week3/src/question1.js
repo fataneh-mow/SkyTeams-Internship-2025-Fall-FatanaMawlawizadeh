@@ -29,10 +29,3 @@ export function vowelCount(string) {
 
     return `${string} has ${count} vowels`;
 }
-
-// try {
-//     console.log(vowelCount("hello")); 
-//     console.log(vowelCount(123));    
-// } catch (error) {
-//     console.log("Input must be string!");
-// }
