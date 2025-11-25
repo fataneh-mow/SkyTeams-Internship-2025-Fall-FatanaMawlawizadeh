@@ -25,7 +25,7 @@ import { findGCD } from '../src/question24';
    
 // });
 
-describe("findGCD function finds the gratest common factor of two numbers using euclidean algorithmfindGCD function finds the gratest common factor of two numbers using euclidean algorithm", () => {
+describe("findGCD function finds the gratest common factor of two numbers using euclidean algorithm findGCD function finds the gratest common factor of two numbers using euclidean algorithm", () => {
     it("Does not check for unapplicable inputs", () => {
         expect(findGCD(12, undefined)).toBe("Input must be numbers");
         expect(findGCD("abc", undefined)).toBe("Input must be numbers");
