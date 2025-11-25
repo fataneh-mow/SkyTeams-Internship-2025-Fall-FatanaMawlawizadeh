@@ -26,7 +26,7 @@ describe("isLeapYear checks if a year is Leap year or not", () => {
         expect(isLeapYear("hello1234")).toBe("hello1234 is not checkable");
         expect(isLeapYear(undefined)).toBe("undefined is not checkable");
     });
-    it("Consides null as zero and techniacally returns taht as a Leap Year", () => {
+    it("Considers null as zero and techniacally returns that as a Leap Year", () => {
         expect(isLeapYear(null)).toBe("null is Leap Year");
     });
     it("Runs with positive numbers", () => {

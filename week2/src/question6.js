@@ -18,5 +18,5 @@ export function convertTime (allSeconds) {
     let minutes = Math.floor(remaining / 60);
     let seconds = Math.floor(remaining % 60);
 
-    return `${hours} hr, ${minutes} m, ${seconds} s`
+    return `${hours}:${minutes}:${seconds}`
 }

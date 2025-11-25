@@ -25,11 +25,11 @@ import { findGCD } from '../src/question24';
    
 // });
 
-describe("GCD Function Tests", () => {
+describe("findGCD function finds the gratest common factor of two numbers using euclidean algorithmfindGCD function finds the gratest common factor of two numbers using euclidean algorithm", () => {
     it("Does not check for unapplicable inputs", () => {
-        expect(findGCD(12, undefined)).toBe("Insert only numbers");
-        expect(findGCD("abc", undefined)).toBe("Insert only numbers");
-        expect(findGCD("hello", 5)).toBe("Insert only numbers");
+        expect(findGCD(12, undefined)).toBe("Input must be numbers");
+        expect(findGCD("abc", undefined)).toBe("Input must be numbers");
+        expect(findGCD("hello", 5)).toBe("Input must be numbers");
     });
     it("Finds GCD with positive numbers", () => {
         expect(findGCD(12, 18)).toBe("GCD of 12, 18 is 6");

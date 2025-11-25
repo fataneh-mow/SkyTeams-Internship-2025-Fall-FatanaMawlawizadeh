@@ -18,10 +18,10 @@ import { displayMonth } from "../src/question13";
 
 describe("displayMonth displays date as you enter a month and the number of days it has", () => {
     it("Does not check for unapplicable numbers", () => {
-        expect(displayMonth(-100)).toBe("-100 must be in 1-12 range");
+        expect(displayMonth(-100)).toBe("Input must be between 1 to 12");
         expect(displayMonth("Hello")).toBe("Hello must be a number");
-        expect(displayMonth("100")).toBe("100 must be in 1-12 range");
-        expect(displayMonth(0)).toBe("0 must be in 1-12 range");
+        expect(displayMonth("100")).toBe("Input must be between 1 to 12");
+        expect(displayMonth(0)).toBe("Input must be between 1 to 12");
     });
     it("returns Month and the days it has", () => {
         expect(displayMonth(12)).toBe("December, 31 days");

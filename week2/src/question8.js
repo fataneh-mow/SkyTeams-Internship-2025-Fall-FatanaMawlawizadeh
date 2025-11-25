@@ -12,7 +12,7 @@
     Negative
 */
 
-export function numberCategory (input) {
+export function numberSign (input) {
     const num = Number(input);
 
     if (isNaN(num)) {

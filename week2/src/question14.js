@@ -14,7 +14,7 @@
  */
 
 export function characterType(char) {
-    // letters
+
     let letters = [];
     // A - Z upperCase
     for (let i = 65; i <= 90; i++) {
@@ -25,16 +25,13 @@ export function characterType(char) {
         letters.push(String.fromCharCode(i));
     }
 
-    //vowels
     let vowels = ["A","E","I","O","U","a","e","i","o","u"];
 
-    // numbers
     let numbers = [];
     for (let i = 0; i <= 9; i++) {
         numbers.push(i,String(i));
     }
 
-    // Symbols
     let symbols = [];
 
     for (let i = 32; i <= 47; i++) {
@@ -50,7 +47,6 @@ export function characterType(char) {
         symbols.push(String.fromCharCode(i));
     }
 
-    // switch case
     switch (true) {
         case String(char).length !== 1:
             return "Enter one character";
@@ -68,5 +64,5 @@ export function characterType(char) {
 
         default:
             return `enter one character`;
-    };
+    }
 };

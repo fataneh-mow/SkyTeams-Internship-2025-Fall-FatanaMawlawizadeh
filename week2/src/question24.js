@@ -21,7 +21,7 @@ export function findGCD (a, b) {
     b = Number(b);
 
     if (isNaN(a) || isNaN(b)) {
-        return "Insert only numbers";
+        return "Input must be numbers";
     }
 
     while (b !== 0) {

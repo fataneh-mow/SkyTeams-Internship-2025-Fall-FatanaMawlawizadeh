@@ -17,7 +17,7 @@ export function displayMonth (month) {
     if (isNaN(month)) {
         return `${month} must be a number`;
     } else if (month > 12 || month < 0) {
-        return `${month} must be in 1-12 range`;
+        return `Input must be between 1 to 12`;
     }
 
     switch (month) {
@@ -47,6 +47,6 @@ export function displayMonth (month) {
             return "December, 31 days";
               
         default:
-            return `${month} must be in 1-12 range`;
-    };
+            return `Input must be between 1 to 12`;
+    }
 };

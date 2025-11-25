@@ -15,7 +15,7 @@
 
 export function trafficLight (color) {
     if (typeof color !== "string") {
-        return `Insert a color`;
+        return `Input must be color`;
     };
 
     switch (color.toLocaleLowerCase().trim()) {
