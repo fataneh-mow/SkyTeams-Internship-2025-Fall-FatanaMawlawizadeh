@@ -1,7 +1,7 @@
 /*
     * Author: Fatana Mawlawizadeh *
 
-    * Date: Nov, 23th, 2025 *
+    * Date: Nov, 25th, 2025 *
 
     Question 5. Write a function to find the largest element in an array 
     Description: Given an array of numbers, return the largest value. 

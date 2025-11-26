@@ -1,7 +1,7 @@
 /*
     * Author: Fatana Mawlawizadeh *
 
-    * Date: Nov, 23th, 2025 *
+    * Date: Nov, 25th, 2025 *
 
     Question 4. Display all factors of a number 
     Description: Print all numbers that divide the given number exactly. 

@@ -1,7 +1,7 @@
 /*
     * Author: Fatana Mawlawizadeh *
 
-    * Date: Nov, 23th, 2025 *
+    * Date: Nov, 25th, 2025 *
 
     Question 7. Write a function to find the sum of all elements in an array 
     Description: Calculate the total sum of all array elements. 
