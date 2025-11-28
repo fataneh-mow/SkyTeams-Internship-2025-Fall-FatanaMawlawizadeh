@@ -24,5 +24,5 @@ export function arraySum (numbers) {
         sum += numbers[i];
     }
 
-    return `${numbers} sum is ${sum}`;
+    return sum;
 };

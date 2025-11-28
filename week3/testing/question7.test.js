@@ -24,15 +24,15 @@ describe("arraySum finds the sum of numbers in an array", () => {
         expect(() => arraySum(undefined)).toThrow("Input must be an array that is not empty");
     });
     it("Sums all the numbers in an array", () => {
-        expect(arraySum([1, 2, 3])).toBe("1,2,3 sum is 6");
+        expect(arraySum([1, 2, 3])).toBe(6);
     });
     it("Sums all the numbers in an array having negative numbers", () => {
-        expect(arraySum([-1, -2, 4])).toBe("-1,-2,4 sum is 1");
+        expect(arraySum([-1, -2, 4])).toBe(1);
     });
     it("Sums all the numbers in an array having negative numbers", () => {
-        expect(arraySum([-1, -2, -4])).toBe("-1,-2,-4 sum is -7");
+        expect(arraySum([-1, -2, -4])).toBe(-7);
     });
     it("Sums all the numbers in an array having decimal numbers", () => {
-        expect(arraySum([12.5, 6.4, 1.1])).toBe("12.5,6.4,1.1 sum is 20");
+        expect(arraySum([12.5, 6.4, 1.1])).toBe(20);
     });
 });
