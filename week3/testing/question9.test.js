@@ -23,9 +23,9 @@ describe("repititionCount function counts if how many times an element is repeat
         expect(() => repitionCount(["hello"], "hello")).toThrow("Input must be a list as an array and an item as a number");
     });
     it("Checks for the repeated element", () => {
-        expect(repitionCount([1, 2], 2)).toBe("2 repeated in this list 1 times");
-        expect(repitionCount([1, 0, 6, 8, 9], 2)).toBe("2 repeated in this list 0 times");
-        expect(repitionCount([-1, 2], -1)).toBe("-1 repeated in this list 1 times");
-        expect(repitionCount([1.14, 2], 1.14)).toBe("1.14 repeated in this list 1 times");
+        expect(repitionCount([1, 2], 2)).toBe(1);
+        expect(repitionCount([1, 0, 6, 8, 9], 2)).toBe(0);
+        expect(repitionCount([-1, 2], -1)).toBe(1);
+        expect(repitionCount([1.14, 2], 1.14)).toBe(1);
     });
 });

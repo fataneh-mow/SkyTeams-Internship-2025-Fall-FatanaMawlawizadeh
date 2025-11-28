@@ -25,5 +25,5 @@ export function repitionCount (list, element) {
         }
     }
 
-    return `${element} repeated in this list ${count} times`;
+    return count;
 };

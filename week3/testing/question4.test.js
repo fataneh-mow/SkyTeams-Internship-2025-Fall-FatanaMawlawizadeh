@@ -24,14 +24,14 @@ describe("numFactors find factors of a number", () => {
         expect(() => numFactors("Hello")).toThrow("Input must be number");
     });
     it("Find factors wehn input is positive number", () => {
-        expect(numFactors(12)).toBe("12 factors are:1,2,3,4,6,12");
-        expect(numFactors(7)).toBe("7 factors are:1,7");
+        expect(numFactors(12)).toStrictEqual([1,2,3,4,6,12]);
+        expect(numFactors(7)).toStrictEqual([1,7]);
     });
     it("Find factors wehn input is negative number", () => {
-        expect(numFactors(-12)).toBe("-12 factors are:1,2,3,4,6,12");
-        expect(numFactors("-7")).toBe("-7 factors are:1,7");
+        expect(numFactors(-12)).toStrictEqual([1,2,3,4,6,12]);
+        expect(numFactors("-7")).toStrictEqual([1,7]);
     });
     it("Find factors wehn input is fractional number", () => {
-        expect(numFactors(12/1)).toBe("12 factors are:1,2,3,4,6,12");
+        expect(numFactors(12/1)).toStrictEqual([1,2,3,4,6,12]);
     });
 });

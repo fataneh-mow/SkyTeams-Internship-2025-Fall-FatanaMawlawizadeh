@@ -18,12 +18,21 @@ export function digitSum (digit) {
         throw new Error ("Insert number");
     };
 
+    
     let sum = 0;
-    let digitStr = String(digit);
-
-    for (let i = 0; i < digitStr.length ; i++) {
-        sum += Number(digitStr[i]);
-    };
+    let number = digit;
+    while (number > 0) {
+        let lastDigit = number % 10;
+        sum += lastDigit;
+        number = Math.floor(number/10);
+    }
 
     return sum;
 };
+
+console.log(digitSum(12));
+ // let digitStr = String(digit);
+
+    // for (let i = 0; i < digitStr.length ; i++) {
+    //     sum += Number(digitStr[i]);
+    // };

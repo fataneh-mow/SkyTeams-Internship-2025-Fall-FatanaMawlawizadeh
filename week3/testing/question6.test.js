@@ -23,16 +23,16 @@ describe("smallestNum finds the smallest number in a list", () => {
         expect(() => smallestNum([])).toThrow("Input must be an array that is not empty");
     });
     it("Finds the smallest number in an array", () => {
-        expect(smallestNum([12, 4, 5])).toBe("12,4,5 smallest number is 4");
-        expect(smallestNum([0, 3, 2])).toBe("0,3,2 smallest number is 0");
-        expect(smallestNum([12, 4, "5"])).toBe("12,4,5 smallest number is 4");
+        expect(smallestNum([12, 4, 5])).toBe(4);
+        expect(smallestNum([0, 3, 2])).toBe(0);
+        expect(smallestNum([12, 4, "5"])).toBe(4);
     });
     it("Finds the smallest number in an array with negative numbers", () => {
-        expect(smallestNum([12, 4, -5])).toBe("12,4,-5 smallest number is -5");
-        expect(smallestNum([0, -3, 2])).toBe("0,-3,2 smallest number is -3");
-        expect(smallestNum([12, 4, "-5"])).toBe("12,4,-5 smallest number is -5");
+        expect(smallestNum([12, 4, -5])).toBe(-5);
+        expect(smallestNum([0, -3, 2])).toBe(-3);
+        expect(smallestNum([12, 4, "-5"])).toBe("-5");
     });
     it("Finds the smallest number in an array with decimal numbers", () => {
-        expect(smallestNum([12, 4.2, -5.2])).toBe("12,4.2,-5.2 smallest number is -5.2");
+        expect(smallestNum([12, 4.2, -5.2])).toBe(-5.2);
     });
 });

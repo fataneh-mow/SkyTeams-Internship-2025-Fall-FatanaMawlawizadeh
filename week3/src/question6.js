@@ -25,5 +25,5 @@ export function smallestNum (numbers) {
             smallest = numbers[i]; } 
     } 
     
-    return `${numbers} smallest number is ${smallest}`;
+    return smallest;
 };

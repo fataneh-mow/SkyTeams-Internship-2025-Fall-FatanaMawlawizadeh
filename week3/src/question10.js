@@ -32,5 +32,3 @@ export function isPrime(number) {
 
     return `Prime`;
 };
-
-console.log(isPrime(7))

@@ -26,5 +26,5 @@ export function numFactors(number) {
         }
     }
 
-    return `${number} factors are:${factors}`;
+    return factors;
 };

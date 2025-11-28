@@ -25,5 +25,5 @@ export function greatestNum (numbers) {
             greatestNum = numbers[i]; } 
     } 
     
-    return `${numbers} greatest number is ${greatestNum}`;
+    return greatestNum;
 };

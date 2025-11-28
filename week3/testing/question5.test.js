@@ -23,16 +23,16 @@ describe("greatestNum finds the greatest number in a list", () => {
         expect(() => greatestNum(null)).toThrow("Input must be an array that is not empty");
     });
     it("Finds greatest number inseide a lsit", () => {
-        expect(greatestNum([12, 15])).toBe("12,15 greatest number is 15");
-        expect(greatestNum([12, 0])).toBe("12,0 greatest number is 12");
-        expect(greatestNum([12, "18"])).toBe("12,18 greatest number is 18");
+        expect(greatestNum([12, 15])).toBe(15);
+        expect(greatestNum([12, 0])).toBe(12);
+        expect(greatestNum([12, "18"])).toBe("18");
     });
     it("Finds greatest number inseide a lsit of negative numbres", () => {
-        expect(greatestNum([12, -15])).toBe("12,-15 greatest number is 12");
-        expect(greatestNum([-20, -12])).toBe("-20,-12 greatest number is -12");
+        expect(greatestNum([12, -15])).toBe(12);
+        expect(greatestNum([-20, -12])).toBe(-12);
     });
     it("Finds greatest number inseide a lsit of decimal numbres", () => {
-        expect(greatestNum([4.8, 4.3])).toBe("4.8,4.3 greatest number is 4.8");
-        expect(greatestNum([5.1,5.4])).toBe("5.1,5.4 greatest number is 5.4");
+        expect(greatestNum([4.8, 4.3])).toBe(4.8);
+        expect(greatestNum([5.1,5.4])).toBe(5.4);
     });
 });

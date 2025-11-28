@@ -27,5 +27,5 @@ export function vowelCount(string) {
         }
     }
 
-    return `${string} has ${count} vowels`;
+    return count;
 }
