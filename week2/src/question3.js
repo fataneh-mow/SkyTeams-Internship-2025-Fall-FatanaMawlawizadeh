@@ -7,13 +7,15 @@
 
 */
 
-export function areaPerimeter (length, width) {
-    length = Number(length);
-    width = Number(width);
+export function recangleAreaPerimeter (length, width) {
 
-    if (isNaN(Number(length)) || isNaN(Number(width)) || length === undefined || length === null) {
-        return `Input must be numbers`
+    if (isNaN(Number(length)) || isNaN(Number(width)) || length === undefined || length === null || width === null || width === undefined) {
+        throw new Error("Input must be numbers");
     };
+
+    if ( length <= 0 || width <= 0) {
+        throw new Error("Inputs can not be zero or less than")
+    }
 
     let area = length * width;
 
