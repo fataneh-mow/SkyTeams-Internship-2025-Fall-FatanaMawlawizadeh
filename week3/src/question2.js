@@ -13,24 +13,21 @@
 
 */
 
-export function reserveNumber (number) {
+export function reverseNumber (number) {
     if (isNaN(number) || number === undefined || number === null) {
-        throw new Error("Insert number")
+        throw new Error(`Error: Invalid Input
+        Make sure your input is anything except the following
+        String, Undefined, Null`);
     };
 
-    let numString = String(number);
-    // numString = Math.abs(number);
+    let reversed = 0;
+    let num = Math.abs(number);
 
-    let reserved = "";
-    for (let i = numString.length -1 ; i >= 0; i--) {
-        reserved += numString[i];
-    };
+    while (num > 0) {
+        let finalDigit = num % 10;
+        reversed = (reversed * 10) + finalDigit;
+        num = Math.floor(num /10);
+    }
 
-    return `${number} reserved is ${reserved}`;
+    return Math.sign(number) * reversed;
 };
-
-try {
-    console.log(reserveNumber());
-} catch (error) {
-    console.log("Insert only number");
-}

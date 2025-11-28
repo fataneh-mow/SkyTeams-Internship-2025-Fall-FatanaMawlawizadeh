@@ -14,24 +14,27 @@
 */
 
 import { describe, it, expect } from "vitest";
-import { reserveNumber } from "../src/question2";
+import { reverseNumber } from "../src/question2";
 
-describe("reserveNumber function reserves numbers", () => {
+describe("reverseNumber function reserves numbers", () => {
     it("Does not reserve inputs rather than number", () => {
-        expect(() => reserveNumber()).toThrow("Insert number");
-        expect(() => reserveNumber(undefined)).toThrow("Insert number");
-        expect(() => reserveNumber(null)).toThrow("Insert number");
-        expect(() => reserveNumber("Hello")).toThrow("Insert number");
+
+        const error = `Error: Invalid Input
+        Make sure your input is anything except the following
+        String, Undefined, Null`
+
+        expect(() => reverseNumber()).toThrow(error);
+        expect(() => reverseNumber(undefined)).toThrow(error);
+        expect(() => reverseNumber(null)).toThrow(error);
+        expect(() => reverseNumber("Hello")).toThrow(error);
     });
     it("Reserves positive numbers", () => {
-        expect(reserveNumber("12")).toBe("12 reserved is 21");
-        expect(reserveNumber(12)).toBe("12 reserved is 21");
-        expect(reserveNumber(456)).toBe("456 reserved is 654");
+        expect(reverseNumber("12")).toBe(21);
+        expect(reverseNumber(12)).toBe(21);
+        expect(reverseNumber(456)).toBe(654);
     });
     it("Reserves different numbers", () => {
-        expect(reserveNumber(1.2)).toBe("1.2 reserved is 2.1");
-        expect(reserveNumber(-112)).toBe("-112 reserved is 211-");
-        expect(reserveNumber(9/3)).toBe("3 reserved is 3");
-        expect(reserveNumber("2/5")).toBe("0.4 reserved is 4.0");
+        expect(reverseNumber(-112)).toBe(-211);
+        expect(reverseNumber(9/3)).toBe(3);
     });
 });
