@@ -1,7 +1,7 @@
 /*
     * Author: Fatana Mawlawizadeh *
 
-    * Date: Nov, 25th, 2025 *
+    * Date: Nov, 30th, 2025 *
 
     Question 29. Check if Two Arrays Are Equal 
     Description: Compare two arrays and determine if they contain the same elements in the same 
@@ -38,5 +38,3 @@ export function isArrayEqual (arr1, arr2) {
 
     return isEqual;
 };
-console.log(isArrayEqual([null], [2, 1]));
-console.log(isArrayEqual([null], [null]));

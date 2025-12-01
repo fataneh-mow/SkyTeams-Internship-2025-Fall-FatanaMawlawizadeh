@@ -3,7 +3,7 @@
 
     * Date: Nov, 25th, 2025 *
 
-    Question 28. Remove Duplicates from an Array 
+    Question 30. Remove Duplicates from an Array 
     Description: Remove duplicate elements efficiently from an array. 
     Example: 
     Input: 

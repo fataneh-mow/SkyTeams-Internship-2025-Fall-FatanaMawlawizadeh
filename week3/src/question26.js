@@ -3,7 +3,7 @@
 
     * Date: Nov, 25th, 2025 *
 
-    Question 26. Convert Decimal to Binary 
+    Question 30. Convert Decimal to Binary 
     Description: Convert a decimal number to its binary representation. 
     Example: 
     Input: 

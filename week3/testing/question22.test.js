@@ -1,7 +1,7 @@
 /*
     * Author: Fatana Mawlawizadeh *
 
-    * Date: Nov, 25th, 2025 *
+    * Date: Nov, 30th, 2025 *
 
     Question 22. Collatz Sequence (Hailstone Numbers) 
     Description: 

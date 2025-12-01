@@ -1,7 +1,7 @@
 /*
     * Author: Fatana Mawlawizadeh *
 
-    * Date: Nov, 25th, 2025 *
+    * Date: Nov, 29th, 2025 *
 
     Question 21. Password Strength Checker 
     Description: A strong password must: 

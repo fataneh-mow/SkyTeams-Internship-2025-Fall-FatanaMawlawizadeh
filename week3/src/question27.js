@@ -3,7 +3,7 @@
 
     * Date: Nov, 25th, 2025 *
 
-    Question 27. Find Unique Elements in an Array 
+    Question 30. Find Unique Elements in an Array 
     Description: Return an array with only unique elements from the input array. 
     Example: 
     Input: 
@@ -33,5 +33,3 @@ export function uniqueElements (array) {
 
     return uniqueArr;
 };
-console.log(uniqueElements([1,1,2,3,3,3,4]));
-console.log(uniqueElements([1,1,2]));
