@@ -23,14 +23,31 @@ export function pascalTriangle (rows) {
         Input must not be one of the following
         String, Undefined, Null`);
     }
+    
+    if (rows === 0) {
+        throw new Error("Error: can't generate a pascal pyramid with zero rows");
+    }
 
-    // let result = [];
+    let firstRow = "1";
 
-    // if ( number === 0) {
-    //     return result;
-    // }
+    if (rows === 1) {
+        return firstRow;
+    }
 
-    // for (let i = 0; i < rows; i++) {
-        
-    // }
+    let previousRow = [];
+
+    for (let i = 1; i <= rows; i++) {
+
+        let rowMade = [];
+
+        for (let j = 1; j <= 2 * i - 1; j++) {
+            rowMade += j;
+            // String(rowMade).padStart(rows - 1)
+            // rowMade.push(previousRow);
+        }    
+        console.log(rowMade);
+    }
+    return rows // return for not facing undefined
 };
+
+console.log(pascalTriangle(4));
