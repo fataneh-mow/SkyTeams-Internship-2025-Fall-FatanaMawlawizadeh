@@ -38,11 +38,3 @@ export function isPalindrome (number) {
     
     return `Not Palindrome`;
 };
-
-console.log(isPalindrome("1221"))
-
-try {
-    isPalindrome("helo");
-} catch (error) {
-    console.log("helo is not applicable");
-}
