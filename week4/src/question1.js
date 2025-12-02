@@ -35,5 +35,3 @@ export function secondLargest (arr) {
 
     return secondLargest;
 };
-// console.log(secondLargest([12, -45, 56]));
-// console.log(secondLargest([12, -45]));
