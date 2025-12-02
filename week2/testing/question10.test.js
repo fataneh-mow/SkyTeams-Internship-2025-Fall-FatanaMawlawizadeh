@@ -27,19 +27,19 @@ describe("isLeapYear checks if a year is Leap year or not", () => {
         expect(isLeapYear(undefined)).toBe("undefined is not checkable");
     });
     it("Considers null as zero and techniacally returns that as a Leap Year", () => {
-        expect(isLeapYear(null)).toBe("null is Leap Year");
+        expect(isLeapYear(null)).toBe("Leap Year");
     });
     it("Runs with positive numbers", () => {
-        expect(isLeapYear(2000)).toBe("2000 is Leap Year");
-        expect(isLeapYear(2024)).toBe("2024 is Leap Year");
-        expect(isLeapYear(2023)).toBe("2023 is not Leap Year");
-        expect(isLeapYear(1900)).toBe("1900 is not Leap Year");
+        expect(isLeapYear(2000)).toBe("Leap Year");
+        expect(isLeapYear(2024)).toBe("Leap Year");
+        expect(isLeapYear(2023)).toBe("Not Leap Year");
+        expect(isLeapYear(1900)).toBe("Not Leap Year");
     });
     it("Runs with negative numbers", () => {
-        expect(isLeapYear(-4)).toBe("-4 is Leap Year");
-        expect(isLeapYear(-100)).toBe("-100 is not Leap Year");
+        expect(isLeapYear(-4)).toBe("Leap Year");
+        expect(isLeapYear(-100)).toBe("Not Leap Year");
     });
     it("Runs with numeric strings", () => {
-        expect(isLeapYear("2020")).toBe("2020 is Leap Year");
+        expect(isLeapYear("2020")).toBe("Leap Year");
     });
 });

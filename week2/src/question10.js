@@ -23,10 +23,10 @@ export function isLeapYear(year) {
     }
 
     if (year % 4 !== 0) {
-        return `${year} is not Leap Year`;
+        return `Not Leap Year`;
     } else if (year % 100 === 0 && year % 400 !== 0) {
-        return `${year} is not Leap Year`;
+        return `Not Leap Year`;
     } else {
-        return `${year} is Leap Year`;
+        return `Leap Year`;
     }
 };
