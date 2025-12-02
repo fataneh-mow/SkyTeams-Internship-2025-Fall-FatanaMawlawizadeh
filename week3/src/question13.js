@@ -28,5 +28,5 @@ export function toPower (base, power) {
         result *= base;
     }
 
-    return `${base} to power of ${power} is ${result}`;
+    return result;
 };

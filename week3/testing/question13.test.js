@@ -24,8 +24,8 @@ describe("toPower function powers a number", () => {
         expect(() => toPower(12, 0)).toThrow("power must be grater than zero");
     });
     it("Finds number(x) to power(y)", () => {
-        expect(toPower(2, 3)).toBe("2 to power of 3 is 8");
-        expect(toPower(3, 2)).toBe("3 to power of 2 is 9");
-        expect(toPower(4, 2)).toBe("4 to power of 2 is 16");
+        expect(toPower(2, 3)).toBe(8);
+        expect(toPower(3, 2)).toBe(9);
+        expect(toPower(4, 2)).toBe(16);
     });
 });
