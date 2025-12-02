@@ -24,9 +24,9 @@ describe("elementExist checks if an elemnet exists in the list or not", () => {
         expect(() => elementExist(undefined)).toThrow("Inputs must be array of numbers and a number");
     });
     it("Checks for the existing elemnt", () => {
-        expect(elementExist([1, 2], 2)).toBe("Found");
-        expect(elementExist([1, 0, 6, 8, 9], 2)).toBe("Not-found");
-        expect(elementExist([-1, 2], -1)).toBe("Found");
-        expect(elementExist([1.14, 2], 1.14)).toBe("Found");
+        expect(elementExist([1, 2], 2)).toBe(true);
+        expect(elementExist([1, 0, 6, 8, 9], 2)).toBe(false);
+        expect(elementExist([-1, 2], -1)).toBe(true);
+        expect(elementExist([1.14, 2], 1.14)).toBe(true);
     });
 });

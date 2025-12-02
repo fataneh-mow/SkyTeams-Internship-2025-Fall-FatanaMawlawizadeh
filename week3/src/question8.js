@@ -20,11 +20,11 @@ export function elementExist (list, e) {
 
     for (let item of list) {
         if (item === e) {
-            return `Found`;
+            return true;
         }
     }
 
-    return `Not-found`;
+    return false;
 };
 
 console.log(elementExist([1, 2], 2));
