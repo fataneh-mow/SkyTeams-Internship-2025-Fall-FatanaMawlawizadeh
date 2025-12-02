@@ -34,15 +34,3 @@ export function factorialNumber (number) {
     }
 
 };
-console.log(factorialNumber(6));
-console.log(factorialNumber(5));
-
-
-try {
-    factorialNumber(null)
-} catch (error) {
-    const errorr = `Error: Invalid Input
-       Input must not be one of the following
-       String, Undefined, Null`
-    console.log(errorr);
-}
