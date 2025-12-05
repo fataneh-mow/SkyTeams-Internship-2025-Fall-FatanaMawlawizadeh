@@ -16,25 +16,16 @@
     Not Palindrome
 
 */
+import { reverseNumber } from "./question2.js"
 
 export function isPalindrome (number) {
     if(isNaN(Number(number)) || number === null || number === undefined) {
-        throw new Error("Input must be number");
+        throw new Error(`Error: Invalid input
+        Make sure input is number`);
     }
 
-    if (number <= 0) {
-        throw new Error(`Number is not applicable`);
-    }
+    number = Math.abs(number)
+    number = Math.floor(number);
 
-    let firstNum = number[0];
-    let NumLength = number.length
-    let lastNum = number[NumLength-1];
-
-    for (let i = 0; i < number.length; i++) {
-        if (firstNum === lastNum) {
-            return `Palindrome`;
-        };
-    };
-    
-    return `Not Palindrome`;
+    return Number(reverseNumber(number)) === number;;
 };
