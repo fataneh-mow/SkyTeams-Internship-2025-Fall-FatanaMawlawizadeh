@@ -12,9 +12,9 @@
 */
 
 import { describe, it, expect } from "vitest";
-import { findIndexOfTarget } from "../src/question6";
+import { findIndexOfTargetWithBinary } from "../src/question6";
 
-describe("findIndexOfTarget function finds the target elemnt inside an array", () => {
+describe("findIndexOfTargetWithBinary function finds the target elemnt inside an array", () => {
     it("Throws error when the input is not valid", () => {
         const error = `Error: Invalid inputs
         Make sure you have entered an array and a target element`;
@@ -22,13 +22,13 @@ describe("findIndexOfTarget function finds the target elemnt inside an array", (
         const testCases = [null, undefined, "hello"];
 
         testCases.forEach(test => {
-            expect(() => findIndexOfTarget(test, test)).toThrow(error);
+            expect(() => findIndexOfTargetWithBinary(test, test)).toThrow(error);
         });
     });
     it("Finds the index of target element", () => {
-        expect(findIndexOfTarget([12, 67, 21], 21)).toBe(2);
-        expect(findIndexOfTarget([12, 21], 12)).toBe(0);
-        expect(findIndexOfTarget([90, 10, 30], 21)).toBe("Not found");
-        expect(findIndexOfTarget([30, -30], -30)).toBe(1);
+        expect(findIndexOfTargetWithBinary([12, 21, 67, 34], 21)).toBe(1);
+        expect(findIndexOfTargetWithBinary([10, 11, 12, 13, 14], 12)).toBe(2);
+        expect(findIndexOfTargetWithBinary([90, 10, 30], 21)).toBe("Not found");
+        expect(findIndexOfTargetWithBinary([-30, 30], -30)).toBe(0);
     });
 });

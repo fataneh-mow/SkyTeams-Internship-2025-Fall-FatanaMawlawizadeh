@@ -11,22 +11,32 @@
 
 */
 
-export function findIndexOfTarget (arr, target) {
+export function findIndexOfTargetWithBinary (arr, target) {
     if(!Array.isArray(arr) || target === undefined || target === null) {
         throw new Error(`Error: Invalid inputs
         Make sure you have entered an array and a target element`); 
     }
 
-    let targetReached = "Not found";
+    let targetIndex = "Not found";
+    
+    let start = 0;
+    let end = arr.length - 1;
 
-    for ( let i = 0; i < arr.length; i++) {
-        if (arr[i] === target) {
-            targetReached = i
+    while (start <= end) {
+        let middle = Math.floor((start + end) / 2);
+
+        if (arr[middle] === target) {
+            targetIndex = middle;
             break;
         }
+        else if (arr[middle] < target) {
+            start = middle + 1
+        }
+        else {
+            end = middle - 1;
+        }
     }
-
-    return targetReached;
+    return targetIndex;
 };
 
-console.log(findIndexOfTarget([1, 3, 4], 4)); // 2
+console.log(findIndexOfTargetWithBinary([1, 3, 12, 19, 10], 4)); // 2
