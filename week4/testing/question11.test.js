@@ -29,6 +29,5 @@ describe("stringRotationCheck checks if string A, doubbled is equal to string B 
         expect(stringRotationCheck("abcde", "cdeab")).toBe(true);
         expect(stringRotationCheck("abc", "acb")).toBe(false);
         expect(stringRotationCheck("aa", "aa")).toBe(true);
-
-    }); // acbacb
+    });
 });
