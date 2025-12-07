@@ -31,15 +31,13 @@ export function patternPrintingRightAngled (number) {
     let result = [];
 
     for (let row = 1; row <= number; row++) {
-        let str = "";
+        let strRow = "";
 
         for (let col = 1; col <= row; col++) {
-            str += "*";
+            strRow += "*";
         }
-        result.push(str);
+        result.push(strRow);
     }
 
     return result.join("\n");
 };
-
-console.log(patternPrintingRightAngled("3"));
