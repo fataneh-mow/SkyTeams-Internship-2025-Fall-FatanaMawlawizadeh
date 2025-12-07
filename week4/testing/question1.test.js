@@ -27,8 +27,9 @@ describe("secondLargest finds the second largest from an array", () => {
     });
     it("Finds the second greatest number among different lists of numbers", () => {
         expect(secondLargest([12, 45, 32, 10])).toBe(32);
-        expect(secondLargest([12, -45, -32, 10])).toBe(32);
-        expect(secondLargest([8/4, 12, 5.19])).toBe(5);
-        expect(secondLargest(["33", 98])).toBe(33);
+        expect(secondLargest([12, -45, -32, 10])).toBe(10);
+        expect(secondLargest([8/4, 12, 5.19])).toBe(5.19);
+        expect(secondLargest(["33", 98])).toBe("33");
+        expect(secondLargest([3.12, 3.45, 3.98])).toBe(3.45);
     });
 });

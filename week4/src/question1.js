@@ -17,13 +17,10 @@ export function secondLargest (arr) {
         Make sure you enter an array as input`);
     }
 
-    let firstLargest = 0;
-    let secondLargest = 0;
+    let firstLargest = -Infinity;
+    let secondLargest = -Infinity;
 
     for (let i = 0; i < arr.length; i++) {
-        arr[i] = Math.abs(arr[i])
-        arr[i] = Math.floor(arr[i])
-
         if (firstLargest < arr[i]) {
             secondLargest = firstLargest; 
             firstLargest = arr[i]
