@@ -18,8 +18,9 @@
 */
 
 export function isLeapYear(year) {
-    if (isNaN(Number(year))) {
-        return `${year} is not checkable`;
+    if (isNaN(Number(year)) || year === undefined || year === null) {
+        throw new Error(`Error: Invalid input
+        Make sure input is a year`);
     }
 
     if (year % 4 !== 0) {

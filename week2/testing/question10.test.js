@@ -22,12 +22,14 @@ import { isLeapYear } from "../src/question10";
 
 describe("isLeapYear checks if a year is Leap year or not", () => {
     it("Does not check for numbers not qualified", () => {
-        expect(isLeapYear("hello")).toBe("hello is not checkable");
-        expect(isLeapYear("hello1234")).toBe("hello1234 is not checkable");
-        expect(isLeapYear(undefined)).toBe("undefined is not checkable");
-    });
-    it("Considers null as zero and techniacally returns that as a Leap Year", () => {
-        expect(isLeapYear(null)).toBe(true);
+        const error = `Error: Invalid input
+        Make sure input is a year`
+
+        const testCases = [null, undefined, "hello"];
+
+        testCases.forEach(test => {
+            expect(() => isLeapYear(test)).toThrow(error);
+        });
     });
     it("Runs with positive numbers", () => {
         expect(isLeapYear(2000)).toBe(true);
