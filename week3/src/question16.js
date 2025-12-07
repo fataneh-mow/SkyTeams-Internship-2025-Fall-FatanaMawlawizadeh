@@ -12,7 +12,7 @@
     0, 1, 1, 2, 3, 5, 8
 */
 
-export function printFibonacciSeries(number) {
+export function printFibonacciSeries (number) {
     if (isNaN(Number(number)) || number === undefined || number === null) {
         throw new Error(`Error: Invalid input
         Make sure input is not one of the following
@@ -32,10 +32,10 @@ export function printFibonacciSeries(number) {
     result.push(num1, num2); // bcz it is proven that the two first numbers of a fibonacci list are 0 and 1
 
     for (let i = 2; i < number; i++) { // since I have two frist indexes [0,1] can start from third index [2]
-        let num3 = num1 + num2;
-        result.push(num3);
+        let fibonacciNum = num1 + num2;
+        result.push(fibonacciNum);
         num1 = num2; 
-        num2 = num3;
+        num2 = fibonacciNum;
     }
 
     return result;
