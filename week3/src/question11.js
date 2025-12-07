@@ -38,5 +38,6 @@ export function listPrimes (number) {
         }
     };
 
-    return `${number} list of primes are ${primes}`;
+    return primes;
 };
+console.log(listPrimes(10))

@@ -28,9 +28,9 @@ describe("listPrimes function finds all prime numbers given a number", () => {
         expect(() => listPrimes(-1)).toThrow("-1 is uncheckable");
     });
     it("List prime numbers", () => {
-        expect(listPrimes(12)).toBe("12 list of primes are 2,3,5,7,11");
-        expect(listPrimes(10)).toBe("10 list of primes are 2,3,5,7");
-        expect(listPrimes(12/2)).toBe("6 list of primes are 2,3,5");
-        expect(listPrimes(15)).toBe("15 list of primes are 2,3,5,7,11,13");
+        expect(listPrimes(12)).toStrictEqual([2,3,5,7,11]);
+        expect(listPrimes(10)).toStrictEqual([2,3,5,7]);
+        expect(listPrimes(12/2)).toStrictEqual([2,3,5]);
+        expect(listPrimes(15)).toStrictEqual([2,3,5,7,11,13]);
     });
 });
