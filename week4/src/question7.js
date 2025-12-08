@@ -8,28 +8,45 @@
 
 */
 
-export function rockPaperScissorsGame (guess) {
-    if (typeof guess !== "string") {
+export function userGuess (guess) {
+    if (typeof guess !== "string" || guess === null || guess === undefined) {
         throw new Error(`Error: Invalid guess
         Make sure your guess is string`);
     }
 
     guess = String(guess).toLowerCase();
 
+    if(guess !== "paper" && guess !== "rock" && guess !== "scissors") {
+        throw new Error(`Error: Invalid item
+        Make sure you choose one of three items
+        rock, papre, scissors`);
+    }
+    
+    return guess;
+};
+
+export function computerChoice () {
     let choices = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * choices.length);
     const computerChoice = choices[randomIndex];
 
-    let result;
+    return computerChoice;
+};
 
-    if( guess === computerChoice) {
+export function rockPaperScissorsGameComparison (userInput) {
+    let userValue = userGuess(userInput);
+    let computerValue = computerChoice();
+
+    let result = "";
+
+    if (userValue === computerValue) {
         result = "it's a tie"
     }
 
-    if (
-        (guess === "rock" && computerChoice === "scissors") ||
-        (guess === "paper" && computerChoice === "rock") ||
-        (guess === "scissors" && computerChoice === "paper") 
+    else if (
+        (userValue === "rock" && computerValue === "scissors") ||
+        (userValue === "paper" && computerValue === "rock") ||
+        (userValue === "scissors" && computerValue === "paper") 
     ) {
         result = "You won";
     } 
@@ -37,6 +54,10 @@ export function rockPaperScissorsGame (guess) {
         result = "You lost"
     }
 
-    return result;
+    return {
+        user: userValue,
+        computer: computerValue,
+        result: result
+    };
 };
-console.log(rockPaperScissorsGame("paper"));
+console.log(rockPaperScissorsGameComparison("paper"));
