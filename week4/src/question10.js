@@ -13,18 +13,25 @@
 export function isUnique (str) {
     if (typeof str !== "string" || str === undefined || str === null) {
         throw new Error(`Error: Invalid Input
-        Make sure inout is string`);
+        Make sure input is string`);
     }
 
     let result = true
 
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === str[i + 1]) {
-            result = false
+        let char = str[i]
+        
+        for (let j = i + 1; j < str.length; j++) {
+            if(char === str[j]) {
+                return false
+            }
         }
     }
 
     return result;
 };
 
+console.log(isUnique("hello"));
+console.log(isUnique("apart"));
 console.log(isUnique("helo"));
+
