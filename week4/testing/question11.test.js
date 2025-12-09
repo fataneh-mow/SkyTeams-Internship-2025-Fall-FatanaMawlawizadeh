@@ -1,7 +1,7 @@
 /**
     Author: Fatana Mawlawizadeh
  
-    Date: Dec, 5nd, 2025
+    Date: Dec, 5th, 2025
 
     Question 11. String Rotation Check 
     Description: Check if one string is rotation of another. 
@@ -10,7 +10,7 @@
 
 */
 
-import { describe, it, expect, test } from "vitest";
+import { describe, it, expect } from "vitest";
 import { stringRotationCheck } from "../src/question11";
 
 describe("stringRotationCheck checks if string A, doubbled is equal to string B or not", () => {

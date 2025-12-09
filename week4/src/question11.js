@@ -1,7 +1,7 @@
 /**
     Author: Fatana Mawlawizadeh
  
-    Date: Dec, 5nd, 2025
+    Date: Dec, 5th, 2025
 
     Question 11. String Rotation Check 
     Description: Check if one string is rotation of another. 
@@ -22,16 +22,21 @@ export function stringRotationCheck (str1, str2) {
     }
 
     let doubbled = str1 + str1;
-    let result;
 
-    for (let i = 0; i < doubbled.length; i++) {
-        if (doubbled.search(str2 !== -1)) { 
-            result = true
+    for (let i = 0; i <= doubbled.length - str2.length; i++) {
+        let result = true;
+
+        for (let j = 0; j < str2.length; j++) {
+            if(doubbled[i + j] !==  str2[j] ) {
+                result = false
+            }
+            
         }
-        else {
-            result = false
+
+        if (result) {
+            return true
         }
     }
-    return result;
+    return false;
 };
-console.log(stringRotationCheck("waterbottle", "erbottlewat")); 
+console.log(stringRotationCheck("waterbottle", "erbottlewat"));
