@@ -10,14 +10,15 @@
     Output: [2, 4, 6, 1, 3, 5]
 
 */
+import { utilitiesConcat, utilitiesSortMinToMax } from "../utilities/utilities.js";
 
-export function reArrangeArrays (arr1, arr2) {
+export function rearrangeArrays (arr1, arr2) {
     if (!Array.isArray(arr1) || !Array.isArray(arr2)) {
         throw new Error(`Error: Invalid Input
         Make sure input is two arrays`);
     }
 
-    let arrays = arr1.concat(arr2);
+    let arrays = utilitiesConcat(arr1, arr2);
     let result = [];
     let even = [];
     let odd = []
@@ -25,15 +26,17 @@ export function reArrangeArrays (arr1, arr2) {
     for (let i = 0; i < arrays.length; i++) {
         if (arrays[i] % 2 === 0) {
             even.push(arrays[i]);
-        } else if ( arrays[i] % 2 === 1) {
+        } else {
             odd.push(arrays[i]);
         }
     }
 
-    even = even.sort((a, b) => a - b);
-    odd = odd.sort((a, b) => a - b);
+    even = utilitiesSortMinToMax(even);
+    odd = utilitiesSortMinToMax(odd);
 
-    result = even.concat(odd);
+    result = utilitiesConcat(even ,odd);
 
     return result;
 };
+
+console.log(rearrangeArrays([3, 2, 1], [6, 5, 4]))
