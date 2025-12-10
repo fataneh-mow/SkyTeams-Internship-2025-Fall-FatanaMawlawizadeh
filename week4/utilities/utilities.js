@@ -89,8 +89,3 @@ export function utilitiesSortMinToMax (arr) {
 
     return result
 }
-
-console.log(utilitiesSortMinToMax([2, 3, 1]))
-
-
-export function utilitiesSplice () {}
