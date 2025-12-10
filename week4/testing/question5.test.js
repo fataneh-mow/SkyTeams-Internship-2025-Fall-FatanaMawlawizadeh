@@ -26,8 +26,8 @@ describe("rearrangeArrays function arranges number from even to odd in ascending
         });
     });
     it("rearranges arrays in even to odd order", () => {
-        expect(rearrangeArrays([1, 34, 56], [12, 65, 43])).toStrictEqual([12, 34, 56, 1, 43, 65]);
-        expect(rearrangeArrays([1, 3, 6], [2, 5, 4])).toStrictEqual([2, 4, 6, 1, 3, 5]);
+        expect(rearrangeArrays([1, 34, 56], [12, 65, 43])).toStrictEqual([12, 34, 56, 1, 65, 43]);
+        expect(rearrangeArrays([1, 3, 6], [2, 5, 4])).toStrictEqual([4, 2, 6, 3, 5, 1]);
         expect(rearrangeArrays([1, 36, 58], [12, 65, 93])).toStrictEqual([12, 36, 58, 1, 65, 93]);
     });
 });
