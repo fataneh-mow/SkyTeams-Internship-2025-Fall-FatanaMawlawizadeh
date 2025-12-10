@@ -29,5 +29,6 @@ describe("setIntersection function finds elements that are the same in two sets(
         expect(setIntersection(["Hello", 12, 54], ["Hello", 45, 12])).toStrictEqual(["Hello", 12]);
         expect(setIntersection([44.09, 32, 15], ["Hello", 44.009, 44])).toStrictEqual([]);
         expect(setIntersection(["ABc", 12, 87, 98], ["ABC", 45, 12, 98])).toStrictEqual([12, 98]);
+        expect(setIntersection([2, 2, 2], [2])).toStrictEqual([2]);
     });
 });
