@@ -10,8 +10,10 @@
     Output: [1, 2, 3, 4, 5, 6]
 
 */
+import { utilitiesConcat } from "../utilities/utilities.js";
 
-export function sortingArrays (arr1, arr2) {
+
+export function concatingSortedArrays (arr1, arr2) {
     if(!Array.isArray(arr1) || !Array.isArray(arr2)) {
         throw new Error(`Error: Invalid input
         Make sure input is array`);
@@ -41,8 +43,8 @@ export function sortingArrays (arr1, arr2) {
     arr1Sorted = sortArray(arr1);
     arr2Sorted = sortArray(arr2);
 
-    let merged = arr1Sorted.concat(arr2Sorted);
+    let merged = utilitiesConcat(arr1Sorted, arr2Sorted);
 
     return sortArray(merged);
-};
-// console.log(sortingArrays([], [3, 9, 7]));
+}
+console.log(concatingSortedArrays([14, 2], [3, 9, 7]));

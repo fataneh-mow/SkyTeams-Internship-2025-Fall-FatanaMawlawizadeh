@@ -8,6 +8,8 @@
     Example: "I am learning JavaScript" → "I a l J"
 
 */
+import { utilitiesSplit } from "../utilities/utilities.js";
+
 
 export function sentenceAbbreviation (sentence) {
     if(typeof sentence !== "string" || sentence === null || sentence === undefined) {
@@ -15,7 +17,7 @@ export function sentenceAbbreviation (sentence) {
         Make sure input is string`);
     }
 
-    let words = sentence.split(' ');
+    let words = utilitiesSplit(sentence, ' ');
     let firstLetters = "";
 
     for (let i = 0; i < words.length; i++) {
