@@ -22,24 +22,26 @@ import { isLeapYear } from "../src/question10";
 
 describe("isLeapYear checks if a year is Leap year or not", () => {
     it("Does not check for numbers not qualified", () => {
-        expect(isLeapYear("hello")).toBe("hello is not checkable");
-        expect(isLeapYear("hello1234")).toBe("hello1234 is not checkable");
-        expect(isLeapYear(undefined)).toBe("undefined is not checkable");
-    });
-    it("Considers null as zero and techniacally returns that as a Leap Year", () => {
-        expect(isLeapYear(null)).toBe("null is Leap Year");
+        const error = `Error: Invalid input
+        Make sure input is a year`
+
+        const testCases = [null, undefined, "hello"];
+
+        testCases.forEach(test => {
+            expect(() => isLeapYear(test)).toThrow(error);
+        });
     });
     it("Runs with positive numbers", () => {
-        expect(isLeapYear(2000)).toBe("2000 is Leap Year");
-        expect(isLeapYear(2024)).toBe("2024 is Leap Year");
-        expect(isLeapYear(2023)).toBe("2023 is not Leap Year");
-        expect(isLeapYear(1900)).toBe("1900 is not Leap Year");
+        expect(isLeapYear(2000)).toBe(true);
+        expect(isLeapYear(2024)).toBe(true);
+        expect(isLeapYear(2023)).toBe(false);
+        expect(isLeapYear(1900)).toBe(false);
     });
     it("Runs with negative numbers", () => {
-        expect(isLeapYear(-4)).toBe("-4 is Leap Year");
-        expect(isLeapYear(-100)).toBe("-100 is not Leap Year");
+        expect(isLeapYear(-4)).toBe(true);
+        expect(isLeapYear(-100)).toBe(false);
     });
     it("Runs with numeric strings", () => {
-        expect(isLeapYear("2020")).toBe("2020 is Leap Year");
+        expect(isLeapYear("2020")).toBe(true);
     });
 });
