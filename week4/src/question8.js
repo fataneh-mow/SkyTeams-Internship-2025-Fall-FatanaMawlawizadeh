@@ -8,15 +8,31 @@
     Example: "100 withdrawn successfully"
 
 */
+
 let account = 10000;
 
+export function menuOptions(option, acc, amount) {
+    switch(option) {
+        case 1:
+            return balanceAccount(acc);
+        case 2:
+            return withdrawFromAccount(amount, acc);
+        case 3:
+            return depositToAccount(amount, acc);
+        case 4:
+            return exitFromATM(acc);
+        default:
+            throw new Error(`Error: Invalid option
+            Make sure you choose options avaliable from 1 to 4`);
+    }
+}
 export function balanceAccount (acc) {
     return acc;
 }
 
 export function withdrawFromAccount (withdrawnAmount, acc) {
     if (withdrawnAmount > acc) {
-        throw new Error(`${withdrawnAmount} is greater than your account budget`);
+        throw new Error(`This amount is greater than your account budget`);
     }
 
     acc -= withdrawnAmount;
@@ -29,11 +45,5 @@ export function depositToAccount (depositAmount, acc) {
 }
 
 export function exitFromATM (acc) {
-    let finalAmountOfAccount = acc;
-    return `Final status of your account ${finalAmountOfAccount}, Thank you for using ATM`
+    return `Final status of your account ${acc}, Thank you for using ATM`
 }
-
-console.log(balanceAccount());
-console.log(withdrawFromAccount(500, account));
-console.log(depositToAccount(100));
-console.log(exitFromATM());

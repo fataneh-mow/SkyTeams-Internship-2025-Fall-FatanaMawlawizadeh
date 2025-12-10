@@ -10,30 +10,38 @@
 */
 
 import { describe, it, expect } from "vitest";
-import { balanceAccount, withdrawFromAccount, depositToAccount, exitFromATM } from "../src/question8";
+import { balanceAccount, withdrawFromAccount, depositToAccount, exitFromATM, menuOptions } from "../src/question8";
 
-describe("balanceAccount, withdrawFromAccount, depositToAccount, exitFromATM: these functions are some features and functions from an ATM system", () => {
-    let account = 10000
-    it("balanceAccount gives you the amount of money you have", () => {
-        expect(balanceAccount(account)).toBe(10000);
-    });
-    it("withdrawFromAccount throws error when the withdraw amount is greater than account amount", () => {
-        const withdrawnAmount = [20000, 30000, 40000]
+describe("menuOptions function provides a menu of four main ATM functions to user", () => {
+    it("When option 1 is selected balances", () => {
+        let account = 500
+        expect(menuOptions(1, account)).toBe(500)
+    })
+    it("When option 2 is selected withdrwas if it is less than account budget and throws error when it is greater", () => {
+        let account = 500
 
-        withdrawnAmount.forEach( amount => {
-            expect(() => withdrawFromAccount(amount, account)).toThrow(`${amount} is greater than your account budget`);
-        });
-    });
-    it("withdrawFromAccount witdraws from account with updating it", () => {
-        expect(account = withdrawFromAccount(500, account)).toBe(9500);
-        expect(account = withdrawFromAccount(500, account)).toBe(9000);
-        expect(account = withdrawFromAccount(500, account)).toBe(8500);
-    });
-    it("depositToAccount function adds the amout user wants to account and updates it", () => {
-        expect(account = depositToAccount(500, account)).toBe(9000);
-        expect(account = depositToAccount(5000, account)).toBe(14000);
-    });
-    it("exitFromATM gives you the final status of your account", () => {
-        expect(exitFromATM(account)).toBe(`Final status of your account 14000, Thank you for using ATM`);
-    });
+        const error = `This amount is greater than your account budget`
+        expect(() => menuOptions(2, account, 1000)).toThrow(error)
+
+        expect(menuOptions(2, account, 200)).toBe(300)
+    })
+    it("When option 3 is selected adds the deposit amount to selected account", () => {
+        let account = 500
+        expect(menuOptions(3, 200, account)).toBe(700)
+    }) 
+    it("When option 3 is selected exits from ATM", () => {
+        let account = 500
+        let finalMessage = `Final status of your account ${account}, Thank you for using ATM`
+
+        expect(menuOptions(4, account)).toBe(finalMessage)
+    })
+    it("Throws error when options greater than 4 are selected", () => {
+        const error = `Error: Invalid option
+            Make sure you choose options avaliable from 1 to 4`
+
+        const testCases = [5, 6, 7];
+        testCases.forEach(test => {
+            expect(() => menuOptions(test)).toThrow(error)
+        })
+    })
 });
