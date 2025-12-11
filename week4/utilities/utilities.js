@@ -113,3 +113,38 @@ export function utilitiesSliceArray (arr, start, end) {
 
     return result
 }
+
+export function utilitiesReverseString (str) {
+    let reversed = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+
+    return reversed
+}
+
+export function utilitiesReverseNumber (number) {
+    let reversed = 0;
+    let num = Math.abs(number);
+
+    while (num > 0) {
+        let finalDigit = num % 10;
+        reversed = (reversed * 10) + finalDigit;
+        num = Math.floor(num /10);
+    }
+
+    return Math.sign(number) * reversed;
+}
+
+export function utilitiesGenerateSubStringsOfString(str) {
+    let result = [];
+
+    for (let start = 0; start < str.length; start++) {
+        for (let end = start + 1; end <= str.length; end++) {
+            result.push(utilitiesSliceString(str, start, end));
+        }
+    }
+
+    return result;
+}
