@@ -89,3 +89,27 @@ export function utilitiesSortMinToMax (arr) {
 
     return result
 }
+
+export function utilitiesSliceString (str, start, end) {
+    if (end === undefined) {
+        end = str.length;
+    }
+    
+    let result = ""
+
+    for (let i = start; i < end; i++) {
+        result += str[i];
+    }
+
+    return result
+}
+
+export function utilitiesSliceArray (arr, start, end) {
+    let result = []
+
+    for (let i = start; i < end; i++) {
+        result += arr[i];
+    }
+
+    return result
+}
