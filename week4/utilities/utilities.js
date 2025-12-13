@@ -90,6 +90,35 @@ export function utilitiesSortMinToMax (arr) {
     return result
 }
 
+export function utilitiesSortMaxToMin (arr) {
+     let result = []
+
+    let tempArr = [...arr]
+    
+    while (tempArr.length > 0) {    
+        let max = tempArr[0];
+
+        for (let i = 1; i < tempArr.length; i ++) {
+            if (tempArr[i] > max) {
+                max = tempArr[i]
+            }
+        }
+        result.push(max)
+
+        let newArr = [];
+        // Removing max if it was about to get pushed more than one time
+        for (let i = 0; i < tempArr.length; i++) {
+            if (tempArr[i] !== max || (tempArr[i] === max && utilitiesInlcludes(newArr, max))) {
+                newArr.push(tempArr[i]);
+            }
+        }
+
+        tempArr = newArr;
+    }
+
+    return result
+}
+
 export function utilitiesSliceString (str, start, end) {
     if (end === undefined) {
         end = str.length;
