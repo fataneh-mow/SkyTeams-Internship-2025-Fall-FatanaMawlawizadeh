@@ -33,3 +33,8 @@ export function uniqueElements (array) {
 
     return uniqueArr;
 };
+
+function uniqueElementsUsingSets (arr) {
+    let set = new Set(arr)
+    return set
+}
