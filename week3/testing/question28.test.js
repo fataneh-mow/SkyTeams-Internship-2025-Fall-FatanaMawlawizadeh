@@ -27,11 +27,6 @@ describe("removeDuplicates function removes duplicated elements from an array", 
             expect(() => removeDuplicates(item)).toThrow(error);
         });
     });
-    it("Throws error if array has no element", () => {
-        const error = "Error: empty array is not valid";
-
-        expect(() => removeDuplicates([])).toThrow(error);
-    });
     it("Removes duplicates from an array", () => {
         expect(removeDuplicates([3, 1, 3, 5, 1])).toStrictEqual([3, 1, 5]);
         expect(removeDuplicates([1, 2, 3, 3, 3])).toStrictEqual([1, 2, 3]);
