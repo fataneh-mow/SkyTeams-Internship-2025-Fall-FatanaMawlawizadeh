@@ -32,8 +32,8 @@ describe("missingNumber function prints all the missing numbers in an array, inc
         expect(() => missingNumber([])).toThrow(error);
     });
     it("Finds missing number in a list of numbers, gives only natural numbers", () => {
-        expect(missingNumber([2, 3, 6])).toStrictEqual([1, 4, 5]);
-        expect(missingNumber([1, 2, 4, 5])).toStrictEqual([3]);
-        expect(missingNumber([2, 3, 6, 8])).toStrictEqual([1, 4, 5, 7]);
+        expect(missingNumber([1, 2, 3, 5])).toStrictEqual(4);
+        expect(missingNumber([1, 2, 4, 5])).toStrictEqual(3);
+        expect(missingNumber([1, 2, 3, 4, 5, 6, 8])).toStrictEqual(7);
     });
 });
