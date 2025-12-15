@@ -21,10 +21,6 @@ export function removeDuplicates (array) {
 
     let resultArr = []
 
-    if (array.length === 0) {
-        throw new Error("Error: empty array is not valid");
-    }
-
     for (let i = 0; i < array.length; i++) {
         let exist = resultArr.some(e => e === array[i])
 
@@ -35,3 +31,8 @@ export function removeDuplicates (array) {
 
     return resultArr;
 };
+
+export function removeDuplicatesUsingSet (arr) {
+    let set = new Set(arr)
+    return set
+}
