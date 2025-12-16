@@ -17,9 +17,6 @@
 
 */
 
-// 1. Implement a Queue 
-// • Use a linked list to create a queue class with enqueue, dequeue, front, rear, isEmpty. 
-
 class Node {
     constructor (value) {
         this.value = value
@@ -73,19 +70,54 @@ class Queue {
     getRear () {
         return this.rear.value
     }
+
+    reverse () { // works for 3 values
+        let reversed = []
+
+        let printed = this.printToArray()
+
+        for (let i = printed.length -1; i >= 0 ; i--) {
+            reversed.push(printed[i])
+        }
+
+        return reversed
+    }
+
+    printToArray () {
+        let result = []
+        let current = this.front
+
+        while (current !== null) {
+            result.push(current.value)
+            current = current.next
+        }
+
+        return result
+    }
 }
 
-const test = new Queue()
-
-console.log(test.enqueue(1))
-
-console.log(test.dequeue())
-
 const q = new Queue()
+
+console.log(q.isEmpty())
+
 q.enqueue(12)
 q.enqueue(14)
 
-console.log(q)
+console.log(q.printToArray())
+console.log(q.isEmpty())
 
-console.log(q.getFront())
-console.log(q.getRear())
+q.dequeue()
+console.log(q.printToArray())
+
+const q2 = new Queue()
+
+q2.enqueue(5)
+q2.enqueue(15)
+q2.enqueue(25)
+
+
+console.log(q2.getFront())
+console.log(q2.getRear())
+
+// q2.reverse()
+console.log(q2.reverse())
