@@ -17,4 +17,75 @@
 
 */
 
-// export function
+// 1. Implement a Queue 
+// • Use a linked list to create a queue class with enqueue, dequeue, front, rear, isEmpty. 
+
+class Node {
+    constructor (value) {
+        this.value = value
+        this.next = null
+    }
+}
+
+class Queue {
+    constructor () {
+        this.front = null
+        this.rear = null
+    }
+
+    isEmpty () {
+        return this.front === null
+    }
+
+    enqueue (value) {
+        const newNode = new Node(value)
+
+        if(this.isEmpty()) {
+            this.front = newNode
+            this.rear = newNode
+        }
+        else {
+            this.rear.next = newNode
+            this.rear = newNode
+        }
+        return newNode
+    }
+
+    dequeue () {
+        if (this.isEmpty()) {
+            return null
+        }
+
+        const removed = this.front.value
+        this.front = this.front.next
+
+        if (this.front === null) {
+            this.rear = null
+        }
+
+        return removed
+    }
+
+    getFront () {
+        return this.front.value
+    }
+
+    getRear () {
+        return this.rear.value
+    }
+}
+
+const test = new Queue()
+
+console.log(test.enqueue(1))
+
+console.log(test.dequeue())
+
+const q = new Queue()
+q.enqueue(12)
+q.enqueue(14)
+
+console.log(q)
+
+console.log(q.getFront())
+console.log(q.getRear())
