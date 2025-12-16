@@ -51,8 +51,8 @@ export class Stack {
         return this.top
     }
 
-    top () {
-        return this.top
+    peek () {
+        return this.top.value
     }
 
     size () {
@@ -108,5 +108,8 @@ myS.pop()
 console.log(myS.printToArray())
 
 console.log(myS.size())
+
+console.log(myS.peek())
+
 
 console.log(myS.reverse())
