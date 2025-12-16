@@ -17,14 +17,14 @@
 
 */
 
-class Node {
+export class Node {
     constructor (value) {
         this.value = value
         this.next = null
     }
 }
 
-class Queue {
+export class Queue {
     constructor () {
         this.front = null
         this.rear = null
@@ -71,7 +71,7 @@ class Queue {
         return this.rear.value
     }
 
-    reverse () { // works for 3 values
+    reverse () {
         let reversed = []
 
         let printed = this.printToArray()
@@ -96,28 +96,28 @@ class Queue {
     }
 }
 
-const q = new Queue()
+// const q = new Queue()
 
-console.log(q.isEmpty())
+// console.log(q.isEmpty())
 
-q.enqueue(12)
-q.enqueue(14)
+// q.enqueue(12)
+// q.enqueue(14)
 
-console.log(q.printToArray())
-console.log(q.isEmpty())
+// console.log(q.printToArray())
+// console.log(q.isEmpty())
 
-q.dequeue()
-console.log(q.printToArray())
+// q.dequeue()
+// console.log(q.printToArray())
 
-const q2 = new Queue()
+// const q2 = new Queue()
 
-q2.enqueue(5)
-q2.enqueue(15)
-q2.enqueue(25)
+// q2.enqueue(5)
+// q2.enqueue(15)
+// q2.enqueue(25)
 
 
-console.log(q2.getFront())
-console.log(q2.getRear())
+// console.log(q2.getFront())
+// console.log(q2.getRear())
 
-// q2.reverse()
-console.log(q2.reverse())
+// // q2.reverse()
+// console.log(q2.reverse())
