@@ -48,26 +48,81 @@ export function createSinglyLinkedList (element1, element2, element3) {
     node1.next = node2
     node2.next = node3
 
-    let printed =  printSinglyLinkedList(node1)
+    // let printed =  printSinglyLinkedList(node1)
     
-    return printed
+    return node1
 }
 
-// console.log(createSinglyLinkedList(10, 20, 30))
+// let linkedList = createSinglyLinkedList(10, 20, 30)
+// console.log(linkedList)
+// console.log(printSinglyLinkedList(linkedList))
 
 
 // 2. Add a Node at the Beginning 
 // • Insert 5 at the start → [5,10,20,30]. 
 
-// export function addNodeAtTheBeginning (element) {
-//     let head = createSinglyLinkedList(10, 20, 30)
+export function addNodeAtTheBeginning (element) {
+    let head = createSinglyLinkedList(10, 20, 30)
 
-//     let newNode = {
-//         value: element,
-//         next : head
-//     }
+    let newNode = {
+        value: element,
+        next : head
+    }
 
-//     let printed = printSinglyLinkedList(newNode)
-//     return printed
-// }
-// console.log(addNodeAtTheBeginning(5))
+    return newNode
+}
+
+// let nodeAdded = addNodeAtTheBeginning(5)
+// console.log(nodeAdded)
+// console.log(printSinglyLinkedList(nodeAdded))
+
+//  3. Add a Node at the End 
+// • Append 40 → [5,10,20,30,40].
+export function addNodeAtTheEnd (element) {
+    let head = addNodeAtTheBeginning(5)
+
+    let newNode = {
+        value: element,
+        next: null
+    }
+
+    let current = head
+    while (current.next !== null) {
+        current = current.next
+    }
+
+    current.next = newNode
+
+    return head
+}
+
+// console.log(printSinglyLinkedList(addNodeAtTheEnd(40)))
+
+// 4. Delete the First Node 
+// • Remove head → [10,20,30,40]
+export function deleteFirstNode (linkedList) {
+    let removed = linkedList.next
+    return removed
+}
+
+let myLinledList = createSinglyLinkedList(1, 2, 3)
+myLinledList = deleteFirstNode(myLinledList)
+myLinledList = deleteFirstNode(myLinledList)
+
+console.log(printSinglyLinkedList(myLinledList))
+
+// 5. Search for a Value 
+// • Check if 20 exists → return true/false.
+export function isSearchForValue (head, value) {
+    while (head.value !== null) {
+        if(head.value === value) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+}
+
+// let myHead = createSinglyLinkedList(10, 20, 30)
+// console.log(isSearchForValue(myHead, 40))
