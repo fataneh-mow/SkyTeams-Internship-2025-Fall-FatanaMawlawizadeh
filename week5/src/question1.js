@@ -52,20 +52,12 @@ export function createSinglyLinkedList (element1, element2, element3) {
     // linking nodes together
     node1.next = node2
     node2.next = node3
-
-    // let printed =  printSinglyLinkedList(node1)
     
     return node1
 }
 
-// let linkedList = createSinglyLinkedList(10, 20, 30)
-// console.log(linkedList)
-// console.log(printSinglyLinkedList(linkedList))
-
-
 // 2. Add a Node at the Beginning 
 // • Insert 5 at the start → [5,10,20,30]. 
-
 export function addNodeAtTheBeginning (head, element) {
     if (element === null || element === undefined || head === null || head === undefined) {
         throw new Error(`Error: Invalid input
@@ -79,8 +71,6 @@ export function addNodeAtTheBeginning (head, element) {
 
     return newNode
 }
-// let myLinked = createSinglyLinkedList(10, 20, 30)
-// console.log(printSinglyLinkedList(addNodeAtTheBeginning(myLinked, 5)))
 
 //  3. Add a Node at the End 
 // • Append 40 → [5,10,20,30,40].
@@ -117,12 +107,6 @@ export function deleteFirstNode (head) {
     return removed
 }
 
-// let myLinledList = createSinglyLinkedList(1, 2, 3)
-// myLinledList = deleteFirstNode(myLinledList)
-// myLinledList = deleteFirstNode(myLinledList)
-
-// console.log(printSinglyLinkedList(myLinledList))
-
 // 5. Search for a Value 
 // • Check if 20 exists → return true/false.
 export function isSearchForValue (head, value) {
@@ -140,6 +124,3 @@ export function isSearchForValue (head, value) {
         }
     }
 }
-
-// let myHead = createSinglyLinkedList(10, 20, 30)
-// console.log(isSearchForValue(myHead, 40))
