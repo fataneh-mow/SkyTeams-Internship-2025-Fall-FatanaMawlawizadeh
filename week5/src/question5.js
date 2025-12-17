@@ -69,58 +69,42 @@ export class minStack {
     }
 
     push (x) {
+        this.mainStack.push(x)
+        if (this.minStack.isEmpty() || x <= this.minStack.peek()) {
+            this.minStack.push(x)
+        }
+    }
 
+    pop () {
+        const removed = this.mainStack.pop()
+        if (removed === this.minStack.peek()) {
+            this.minStack.pop()
+        }
+        return removed
+    }
+
+    // peek would be the top element of mainStack
+    peek () {
+        return this.mainStack.peek()
+    }
+
+    // getMin would be the top element of minStack
+    getMin () {
+        return this.minStack.peek()
+    }
+
+    printToArray () {
+        return this.mainStack.printToArray()
     }
 }
 
 
+let myS = new minStack()
 
+myS.push(5)
+myS.push(3)
+myS.push(7)
 
-//  getMin (arr) {
+console.log(myS.printToArray())
 
-//         let mainStack = new Stack()
-
-//         for (let i = 0; i < arr.length; i++) {
-//             mainStack.push(arr[i])
-
-//         }
-
-//         let minStack = new Stack()
-//         let min;
-
-//         while (mainStack.next === null) {
-//             min = mainStack.top.value
-
-//             if (min >= minStack.top.value) {
-//                 minStack.push(mainStack.top.value)
-//             }
-//         }
-
-//         let mainStackPeek = mainStack.peek()
-//         let minStackPeek = minStack.peek()
-
-//         if (mainStackPeek === minStackPeek) {
-//             mainStack.pop()
-//             minStack.pop()
-//         }
-//         return minStack
-//     }
-
-
-let stack = new Stack()
-
-stack.push(12)
-console.log(stack)
-
-stack.pop()
-console.log(stack)
-
-stack.push(12)
-stack.push(13)
-console.log(stack.peek())
-
-
-let emptyStack = new Stack()
-
-
-console.log(emptyStack.getMin([10, 20]))
+console.log(myS.getMin())
