@@ -90,26 +90,26 @@ export class Stack {
     }
 }
 
-const myS = new Stack()
+// const myS = new Stack()
 
-console.log(myS.isEmpty())
+// console.log(myS.isEmpty())
 
-myS.push(12)
+// myS.push(12)
 
-console.log(myS)
+// console.log(myS)
 
-myS.push(13)
-myS.push(14)
-myS.push(15)
+// myS.push(13)
+// myS.push(14)
+// myS.push(15)
 
-console.log(myS.printToArray())
+// console.log(myS.printToArray())
 
-myS.pop()
-console.log(myS.printToArray())
+// myS.pop()
+// console.log(myS.printToArray())
 
-console.log(myS.size())
+// console.log(myS.size())
 
-console.log(myS.peek())
+// console.log(myS.peek())
 
 
-console.log(myS.reverse())
+// console.log(myS.reverse())
