@@ -15,6 +15,7 @@
     Output: false
 
 */
+
 import { Queue } from "./question2.js";
 import { Stack } from "./question3.js";
 
@@ -23,6 +24,10 @@ export function isStringValid (str) {
         throw new Error(`Error: Invalid Input
         Make sure input is string`);
     } 
+
+    if (str.length === 0) {
+        throw new Error(`Error: Empty string is not valid`);
+    }
 
     let queue = new Queue;
 
