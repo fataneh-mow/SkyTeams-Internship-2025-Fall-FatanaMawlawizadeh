@@ -39,16 +39,14 @@ export class Stack {
     }
 
     pop () {
+        if (this.isEmpty()) return null
+        const removed = this.top.value
         this.top = this.top.next
-        return this.top
+        return removed
     }
 
     peek () {
         return this.top.value
-    }
-
-    getMin () {
-        
     }
 
     printToArray () {
@@ -64,6 +62,51 @@ export class Stack {
     }
 }
 
+export class minStack {
+    constructor () {
+        this.mainStack = new Stack()
+        this.minStack = new Stack()
+    }
+
+    push (x) {
+
+    }
+}
+
+
+
+
+//  getMin (arr) {
+
+//         let mainStack = new Stack()
+
+//         for (let i = 0; i < arr.length; i++) {
+//             mainStack.push(arr[i])
+
+//         }
+
+//         let minStack = new Stack()
+//         let min;
+
+//         while (mainStack.next === null) {
+//             min = mainStack.top.value
+
+//             if (min >= minStack.top.value) {
+//                 minStack.push(mainStack.top.value)
+//             }
+//         }
+
+//         let mainStackPeek = mainStack.peek()
+//         let minStackPeek = minStack.peek()
+
+//         if (mainStackPeek === minStackPeek) {
+//             mainStack.pop()
+//             minStack.pop()
+//         }
+//         return minStack
+//     }
+
+
 let stack = new Stack()
 
 stack.push(12)
@@ -76,4 +119,8 @@ stack.push(12)
 stack.push(13)
 console.log(stack.peek())
 
-// console.log()
+
+let emptyStack = new Stack()
+
+
+console.log(emptyStack.getMin([10, 20]))
