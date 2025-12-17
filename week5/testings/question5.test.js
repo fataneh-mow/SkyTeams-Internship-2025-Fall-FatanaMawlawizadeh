@@ -46,8 +46,6 @@ describe("minStack class finds pushes, pops, peeks, and finds min value from a s
         myStack.push(20)
         myStack.push(30)
 
-        const mainStackPeek = myStack.peek()
-
         expect(myStack.peek()).toBe(30)
     });
     it("getMin function finds the minimumu stack amount", () => {
