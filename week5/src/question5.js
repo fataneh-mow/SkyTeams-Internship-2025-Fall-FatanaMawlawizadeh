@@ -97,14 +97,3 @@ export class minStack {
         return this.mainStack.printToArray()
     }
 }
-
-
-// let myS = new minStack()
-
-// myS.push(5)
-// myS.push(3)
-// myS.push(7)
-
-// console.log(myS.printToArray())
-
-// console.log(myS.getMin())
