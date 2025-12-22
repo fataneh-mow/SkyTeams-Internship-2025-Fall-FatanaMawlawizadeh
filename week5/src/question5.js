@@ -60,6 +60,16 @@ export class Stack {
 
         return result
     }
+
+    reverse () {
+        let printed = this.printToArray()
+        let reversed = []
+
+        for (let i = printed.length -1; i >= 0; i--) {
+            reversed.push(printed[i])
+        }
+        return reversed
+    }
 }
 
 export class minStack {
