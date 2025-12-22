@@ -16,26 +16,45 @@ import { Stack } from "./question5.js";
 
 export function removeAdjacentDuplicates (str) {
     let stackStr = new Stack()
-    let removedDuplicates = []
+    let removedDuplicates = ''
+
 
     for (let i = 0; i < str.length; i++) {
         let current = str[i]
 
-        if (stackStr.top === null) {
-            stackStr.push(current)
-        }
+        stackStr.push(current)
     }
 
     let stackStrPrinted = stackStr.printToArray()
     
-    for (let char in stackStrPrinted) {
-        if (removedDuplicates.length === 0) {
-            // if ()
-            removedDuplicates.push(char)
+    for (let j = 0; j < stackStrPrinted.length; j++) {
+        if (!utilitiesInlcludes(removedDuplicates, stackStrPrinted[j])) {
+            removedDuplicates += (stackStrPrinted[j])
         }
     }
 
-    return stackStr
+    removedDuplicates = utilitiesReverseString(removedDuplicates)
+    return removedDuplicates
 }
 
-console.log(removeAdjacentDuplicates('abc'))
+console.log(removeAdjacentDuplicates('abccc'))
+
+function utilitiesInlcludes (str, target) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === target) {
+            return true
+        }
+    }
+    return false
+}
+
+
+function utilitiesReverseString (str) {
+    let reversed = '';
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i] ;
+    }
+
+    return reversed
+}
