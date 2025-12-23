@@ -15,26 +15,34 @@
 import { Stack } from "./question5.js";
 
 export function removeAdjacentDuplicates (str) {
+    if (typeof str !== 'string' || str === null || str === undefined) {
+        throw new Error(`Error: Invalid Input
+        Make sure input is string`);
+    }
+
     let stackStr = new Stack()
     let removedDuplicates = ''
 
 
     for (let i = 0; i < str.length; i++) {
-        let current = str[i]
+        // let current = str[i]
 
-        stackStr.push(current)
+        // if (!stackStr.isEmpty() && stackStr.peek() !== current) {
+        //     stackStr.push(current)
+        // }
     }
 
-    let stackStrPrinted = stackStr.printToArray()
+    // let stackStrPrinted = stackStr.printToArray()
     
-    for (let j = 0; j < stackStrPrinted.length; j++) {
-        if (!utilitiesInlcludes(removedDuplicates, stackStrPrinted[j])) {
-            removedDuplicates += (stackStrPrinted[j])
-        }
-    }
+    // for (let j = 0; j < stackStrPrinted.length; j++) {
+        // if (!utilitiesInlcludes(removedDuplicates, stackStrPrinted[j])) {
+            // removedDuplicates += (stackStrPrinted[j])
+        // }
+    // }
 
-    removedDuplicates = utilitiesReverseString(removedDuplicates)
-    return removedDuplicates
+    // removedDuplicates = utilitiesReverseString(removedDuplicates)
+    // return removedDuplicates
+    return stackStr
 }
 
 console.log(removeAdjacentDuplicates('abccc'))
