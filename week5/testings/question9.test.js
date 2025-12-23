@@ -17,11 +17,20 @@ import { removeAdjacentDuplicates } from "../src/question9";
 
 
 describe("removeAdjacentDuplicates fnction removes all duplicates of a string and returns a new string", () => {
-    it("Throws error when input is not string")
+    it("Throws error when input is not string", () => {
+        const error = `Error: Invalid Input
+        Make sure input is string`
+
+        const testCases = [null, undefined, [], 123]
+
+        testCases.forEach(test => {
+            expect(() => removeAdjacentDuplicates(test)).toThrow(error)
+        })
+    });
     it("Removes duplicates and returns it", () => {
-        expect(removeAdjacentDuplicates('1abcccc')).toBe('1abc')
-        expect(removeAdjacentDuplicates('abcc')).toBe('abc')
-        expect(removeAdjacentDuplicates('12333')).toBe('123')
+        expect(removeAdjacentDuplicates('1abcccc')).toBe('ba1')
+        expect(removeAdjacentDuplicates('abcc')).toBe('ba')
+        expect(removeAdjacentDuplicates('123')).toBe('321')
         expect(removeAdjacentDuplicates('000')).toBe('0')
         expect(removeAdjacentDuplicates('$$$')).toBe('$')
     });
