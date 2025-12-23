@@ -17,6 +17,7 @@ import { removeAdjacentDuplicates } from "../src/question9";
 
 
 describe("removeAdjacentDuplicates fnction removes all duplicates of a string and returns a new string", () => {
+    it("Throws error when input is not string")
     it("Removes duplicates and returns it", () => {
         expect(removeAdjacentDuplicates('1abcccc')).toBe('1abc')
         expect(removeAdjacentDuplicates('abcc')).toBe('abc')
